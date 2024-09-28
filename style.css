@@ -16,6 +16,10 @@ body{
     border-bottom: solid black 1px;
     gap: 10px;
     align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
 }
 
 .navbar__s1__title{
@@ -45,6 +49,28 @@ body{
     gap: 20px;
     align-items: center;
 }
+
+.mylearning{
+    position: relative;
+    cursor: pointer;
+}
+
+.mylearning__popup{
+    position: absolute;
+    border: solid black 1px;
+    background-color: white;
+    width: 100px;
+    padding: 10px;
+    top: 40px;
+    right: 0;
+    display: none;
+}
+
+.mylearning:hover .mylearning__popup{
+    display: block;
+
+}
+
 /*categories*/
 
 .categories{
@@ -68,10 +94,7 @@ body{
  /* Container holding the image and the text */
  .container {
     position: relative;
-    text-align: center;
-    background-color: white;
-    color: black;
-    text-align: start;
+    
   
   }
   
