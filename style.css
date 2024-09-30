@@ -75,31 +75,35 @@ body{
 
 .categories{
     display: flex;
-    justify-content: space-around;
-    border-bottom: solid gray 1px;
     padding: 10px;
+    border-bottom: solid gray 1px;
+    justify-content: space-around;
+    
 }
 .categories p{
     background-color: #A435F0;
     color: white;
     padding: 10px;
     border-radius: 30px;
+    cursor: pointer;
+    border: solid #A435F0 1px;
 }
 .categories p:hover{
-    background-color:#910ee9;
-    color: white;
-    border: solid gray 1px;
+    transition: 1s;
+    background-color: transparent;
+    color: black;
+    border: solid #A435F0 1px;
 }
 
  /* Container holding the image and the text */
- .container {
+ .sale-image{
     position: relative;
-    
-  
   }
-  
-  /* Top left text */
-  .top-left {
+  .sale-image img{
+    width: 100%;
+  }
+ 
+.sale-image__offer{
     position: absolute;
     top: 50px;
     left: 60px;
@@ -108,19 +112,35 @@ body{
     width: 350px;
     padding: 25px;
     font-size: 18px;
-    
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
   }
-  .top-left h1{
+
+  @keyframes zoom{
+    0%{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+        
+    }
+  }
+  .sale-image__offer h1{
       margin-bottom:10px ;
   }
-  .button{
+  .sale-image__offer button{
       padding: 10px;
       background-color: #3E4143;
       color: white;
       font-size: 20px;
-      margin-top: 20px;
+      margin-top: 1 0px;
   }
-  .button:hover{
+  .sale-image__offer button:hover{
     background-color: #686b6d;
     color: white;
     
