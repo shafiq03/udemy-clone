@@ -109,7 +109,7 @@ body{
     left: 60px;
     background-color: white;
     color: #3E4143;
-    width: 350px;
+    width: 400px;
     padding: 25px;
     font-size: 18px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
@@ -158,7 +158,9 @@ body{
 
 }
 .course-card{
-    width: 270px;
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 10px
 }
 .course-card:hover{
     background-color: rgb(228, 224, 224);
@@ -233,5 +235,45 @@ body{
     
 
 }
+
+/* Media queries */
+
+@media screen and (max-width:800px) {
+    body{
+        font-size: 16px;
+    }
+    
+}
+@media screen and (max-width:600px) {
+    .course-card{
+        flex-basis: 40%;
+    }
+    .navbar__s3,.navbar__s2{
+        display: none;
+    }
+    
+}
+@media screen and (max-width:900px) {
+    .sale-image__offer{
+        width: 180px;
+        font-size: 10px;
+        padding: 5px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        margin-bottom: 40px;
+        transition: 1s;
+    }
+    .sale-image__offer button{
+        font-size: 10px;
+        padding: 5px;
+    }
+    .categories{
+        display: none;
+    }
+    
+    
+}
+
 
 
